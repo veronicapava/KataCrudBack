@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Todo {
     @Id
-    @GeneratedValue()
+    @GeneratedValue
     private Long id;
     private String name;
     private boolean isCompleted;
@@ -32,7 +32,7 @@ public class Todo {
         return isCompleted;
     }
 
-    public void setCompleted(boolean completed) {
-        isCompleted = completed;
+    public void setCompleted(boolean complete) {
+        isCompleted = complete;
     }
 }

@@ -22,11 +22,11 @@ public class TodoService {
     }
 
     public void delete(Long id){ //Para eliminar un elemento
-        repository.delete(id);
+        repository.delete(get(id));
     }
 
-    public Optional<Todo> get(Long id){ //Para buscar por id
-        return repository.findById(id);
+    public Todo get(Long id){ //Para buscar por id
+        return repository.findById(id).orElseThrow();
     }
 
 
